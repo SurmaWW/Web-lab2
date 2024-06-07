@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>WEB-design-lab1</title>
+    <link rel="icon" type="image/x-icon" href="../imgs/logo.svg">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="min-width=400, initial-scale=1">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache"/>
+    <meta http-equiv="Expires" content="0"/>
+    
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.css" type="text/css">
+</head>
+
+<body class="container-fluid fill-space">
+    <header class="bgn-image">
+        <nav class="navbar navbar-expand-lg navbar-blue bg-blue">
+            <div class="container-fluid">
+                <div class="btn-group" role="group" aria-label="Basic example">
+                    <a class="btn btn-primary" href="../index.html" role="button">Home</a>
+                    <a class="btn btn-primary" href="../pages/calculator.html" role="button">Calculator</a>
+                    <a class="btn btn-primary" href="../pages/myaccount.html" role="button">My account</a>
+                    <a class="btn btn-primary" href="../pages/about.html" role="button">About</a>
+                </div>
+                <form class="d-flex">
+                    <div class="btn-group" role="group" aria-label="Basic outlined example">
+                        <a class="btn btn-primary" href="../pages/signin.html" role="button">Sign In</a>
+                        <a class="btn btn-primary" href="../pages/registration.html" role="button">Registration</a>
+                    </div>
+                </form>
+            </div>
+        </nav>
+    </header>
+
+    <main class="text-white d-flex flex-column justify-content-center align-items-center calculator-body">
+        <div class="col-12 col-md-10 col-lg-8 col-xl-6">
+            <div class="form-floating w-100 mb-3">
+                <input id="calculator_input" type="text" class="form-control rounded-0 rounded-top text-end fs-4" id="floatingInput">
+                <label for="floatingInput" class="text-dark h4">Result</label>
+            </div>
+
+            <div class="row g-2">
+                <div class="col-6">
+                    <button class="btn btn-warning w-100" onclick="clean()">C</button>
+                </div>
+                <div class="col-6">
+                    <button class="btn btn-secondary w-100" onclick="back()">&larr;</button>
+                </div>
+            </div>
+
+            <div class="row g-2 mt-2" id="calculator-bits">
+                <!-- This section will be filled dynamically by JS -->
+            </div>
+
+            <div class="row g-2 mt-2">
+                <div class="col-3">
+                    <button class="btn btn-secondary w-100" onclick="insert('+')">+</button>
+                </div>
+                <div class="col-3">
+                    <button class="btn btn-secondary w-100" onclick="insert('-')">-</button>
+                </div>
+                <div class="col-3">
+                    <button class="btn btn-secondary w-100" onclick="insert('*')">&times;</button>
+                </div>
+                <div class="col-3">
+                    <button class="btn btn-secondary w-100" onclick="insert('/')">&divide;</button>
+                </div>
+            </div>
+
+            <div class="row g-2 mt-2">
+                <div class="col-3">
+                    <button class="btn btn-secondary w-100" onclick="insert('7')">7</button>
+                </div>
+                <div class="col-3">
+                    <button class="btn btn-secondary w-100" onclick="insert('8')">8</button>
+                </div>
+                <div class="col-3">
+                    <button class="btn btn-secondary w-100" onclick="insert('9')">9</button>
+                </div>
+                <div class="col-3">
+                    <button class="btn btn-secondary w-100" onclick="insert('(')">(</button>
+                </div>
+            </div>
+
+            <div class="row g-2 mt-2">
+                <div class="col-3">
+                    <button class="btn btn-secondary w-100" onclick="insert('4')">4</button>
+                </div>
+                <div class="col-3">
+                    <button class="btn btn-secondary w-100" onclick="insert('5')">5</button>
+                </div>
+                <div class="col-3">
+                    <button class="btn btn-secondary w-100" onclick="insert('6')">6</button>
+                </div>
+                <div class="col-3">
+                    <button class="btn btn-secondary w-100" onclick="insert(')')">)</button>
+                </div>
+            </div>
+
+            <div class="row g-2 mt-2">
+                <div class="col-3">
+                    <button class="btn btn-secondary w-100" onclick="insert('1')">1</button>
+                </div>
+                <div class="col-3">
+                    <button class="btn btn-secondary w-100" onclick="insert('2')">2</button>
+                </div>
+                <div class="col-3">
+                    <button class="btn btn-secondary w-100" onclick="insert('3')">3</button>
+                </div>
+                <div class="col-3">
+                    <button class="btn btn-primary w-100" onclick="equal()">=</button>
+                </div>
+            </div>
+
+            <div class="row g-2 mt-2">
+                <div class="col-6">
+                    <button class="btn btn-secondary w-100" onclick="insert('0')">0</button>
+                </div>
+                <div class="col-6">
+                    <button class="btn btn-secondary w-100" onclick="insert('.')">.</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script type="text/javascript" src="../js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="../js/main.js"></script>
+</body>
+</html>

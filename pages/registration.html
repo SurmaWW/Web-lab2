@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>WEB-design-lab1</title>
+    <link rel="icon" type="image/x-icon" href="../imgs/logo.svg">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="min-width=400, initial-scale=1">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache"/>
+    <meta http-equiv="Expires" content="0"/>
+    
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.css" type="text/css">
+</head>
+
+<header>
+    <nav class="navbar navbar-expand-lg navbar-blue bg-blue">
+        <div class="container-fluid">
+            <div class="btn-group" role="group" aria-label="Basic example">
+                <a class="btn btn-primary" href="../index.html" role="button"><span class="material-icons">Home</span></a>
+                <a class="btn btn-primary" href="../pages/calculator.html" role="button"><span class="material-icons">Calculator</span></a>
+                <a class="btn btn-primary" href="../pages/myaccount.html" role="button"><span class="material-icons">My account</span></a>
+                <a class="btn btn-primary" href="../pages/about.html" role="button"><span class="material-icons">About</span></a>
+            </div>
+            <form class="d-flex">
+                <div class="btn-group" role="group" aria-label="Basic outlined example">
+                    <a class="btn btn-primary" href="../pages/signin.html" role="button"><span class="material-icons">Sign In</span></a>
+                    <a class="btn btn-primary" href="../pages/registration.html" role="button"><span class="material-icons">Registration</span></a>
+                </div>
+            </form>
+        </div>
+    </nav>
+</header>
+
+<body class="calculator-body">
+    <div class="container">
+        <h1 class="h3 mb-3 fw-normal text-center">Registration form</h1>
+        <form class="row g-3 needs-validation" novalidate>
+            <div class="col-md-4">
+                <label for="firstName" class="form-label forms-text">First name</label>
+                <input type="text" class="form-control" id="firstName" required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+                <div class="invalid-feedback">
+                    Please provide a first name.
+                </div>
+            </div>
+            <div class="col-md-4">
+                <label for="birthDate" class="form-label forms-text">Birth date</label>
+                <input type="date" class="form-control" id="birthDate" required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+                <div class="invalid-feedback">
+                    Please provide a birth date.
+                </div>
+            </div>
+            <div class="col-md-4">
+                <label for="gender" class="form-label forms-text">Sex</label>
+                <select class="form-select" id="gender" required>
+                    <option selected disabled value="">Choose...</option>
+                    <option>Unknown</option>
+                    <option>Male</option>
+                    <option>Female</option>
+                </select>
+                <div class="invalid-feedback">
+                    Please select a valid gender.
+                </div>
+            </div>
+            <div class="col-md-6">
+                <label for="email" class="form-label forms-text">Email address</label>
+                <input type="email" class="form-control" id="email" required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+                <div class="invalid-feedback">
+                    Please provide a valid email address.
+                </div>
+            </div>
+            <div class="col-md-3">
+                <label for="password" class="form-label forms-text">Password</label>
+                <input type="password" class="form-control" id="password" required>
+                <div class="invalid-feedback">
+                    Please provide a password.
+                </div>
+            </div>
+            <div class="col-md-3">
+                <label for="repeatPassword" class="form-label forms-text">Repeat Password</label>
+                <input type="password" class="form-control" id="repeatPassword" required>
+                <div class="invalid-feedback">
+                    Please repeat your password.
+                </div>
+            </div>
+            <div class="col-12 text-center">
+                <button class="btn btn-primary mt-3" type="submit">Register</button>
+            </div>
+        </form>
+    </div>
+</body>
+
+<script type="text/javascript" src="../js/bootstrap.bundle.min.js"></script>
+</html>
